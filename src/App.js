@@ -17,13 +17,13 @@ function App() {
     const [personsData, setPersonsData] = useState([]);
     const [personsDetailsData, setPersonDetailsData] = useState([]);
 
-    async function fetchData(url, action) {
+    const fetchData = async(url, action) => {
         const data = await fetch(url);
         data
             .json()
             .then(data => action(data.value))
             .catch(err => setErrors(err));
-    }
+    };
 
     useEffect(() => {
         fetchData('https://services.odata.org/Experimental/OData/OData.svc/Persons', setPersonsData);

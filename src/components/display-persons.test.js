@@ -23,6 +23,13 @@ const newProps = {
 describe('<PersonsData /> with data renders component', () => {
     const container = shallow(<PersonsData {...newProps} />);
     it('should match the snapshot with data', () => {
+        expect(container.find('.row').length).toBe(8);
         expect(container.html()).toMatchSnapshot();
     });
+});
+
+test('checks props get rendered', () => {
+    const { getByText } = render(<PersonsData {...newProps} />);
+    const headerText = getByText('Paula Wilson');
+    expect(headerText).toBeInTheDocument();
 });

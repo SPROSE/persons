@@ -22,7 +22,7 @@ function PersonsData(props) {
                 <div className={"scroll-container"}>
                     <table className={"table-centered"}>
                         <thead>
-                        <tr>
+                        <tr className={"row"}>
                             <th>Name</th>
                             <th>Age</th>
                             <th>Phone</th>
@@ -33,7 +33,7 @@ function PersonsData(props) {
                         {persons.map((person, i) => {
                             detail = details.filter(x => x.PersonID === person.ID);
                             return (
-                                <tr key={i}>
+                                <tr key={i}  className={"row"}>
                                     <td>{person.Name}</td>
                                     <td>{detail[0].Age}</td>
                                     <td>{detail[0].Phone}</td>
