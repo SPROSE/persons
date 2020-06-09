@@ -1,6 +1,16 @@
+/**
+ * author: richard sproson
+ * description: index.js imports global styles and starting point of application
+ */
+
+/* Modules */
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+/* Styles */
 import './global/index.scss';
+
+/* Components */
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

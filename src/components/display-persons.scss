@@ -1,0 +1,25 @@
+.table-centered {
+  margin: 0 auto;
+  text-align: left;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  min-width: 800px;
+
+  thead tr {
+    border-bottom: 1px solid #ccc;
+    background-color: #282c34;
+    color: #ffffff;
+  }
+
+  tr:nth-child(even) {
+    background-color: #eee;
+  }
+
+  th, td {
+    padding: 5px 20px
+  }
+}
+
+.scroll-container {
+  overflow-x: auto;
+}

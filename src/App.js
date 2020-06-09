@@ -1,3 +1,8 @@
+/**
+ * author: richard sproson
+ * description: App renders basic containers > hits endpoints > stores data > passes to props
+ */
+
 /* Modules */
 import React, { useState, useEffect } from 'react';
 
@@ -27,7 +32,7 @@ function App() {
 
     if (hasError.length) {
         return (
-            <div>There was an error fetching data</div>
+            <div>There was an error fetching data {hasError}</div>
         )
     }
     return (
